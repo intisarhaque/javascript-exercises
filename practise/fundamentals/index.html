@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+</head>
+<body>
+    
+    <button>Press me</button>
+    <div id="greeting"></div>
+
+
+
+    <script>
+        // Your JavaScript goes here!
+        console.log("Hello, Worldwegg!")
+        let name1 = "jon";
+        console.log(`hello, ${name}`);
+        const button = document.querySelector("button");
+        let x =  21;
+        console.log(`i am ${x} years old`);
+
+        function greet() {
+        const name = prompt("What is your name?");
+        const greeting = document.querySelector("#greeting");
+        greeting.textContent = `Hello ${name1}, nice to see you!`;
+        }
+
+        button.addEventListener("click", greet);
+        
+
+        let text = "Apple, Banana, Kiwi";
+        let part = text.slice(7);
+        console.log(part);
+        name1 = name1.toUpperCase();
+        console.log(name1);
+
+        let texts = "5";
+        let padded = texts.padStart(4,"0");
+        console.log(padded);
+        let my5arr = text.split("");
+        console.log(my5arr[18]);
+    </script>
+
+</body>
+</html>

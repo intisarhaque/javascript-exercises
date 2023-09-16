@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Function library example</title>
+  <style>
+    input {
+      font-size: 2em;
+      margin: 10px 1px 0;
+    }
+  </style>
+  </head>
+<body>
+
+  <input class="plus7" type="text">
+  <p class="plus7result"></p>
+
+  <input class="times2" type="text">
+  <p class="times2result"></p>
+
+  <input class="capitalise" type="text">
+  <p class="capitaliseresult"></p>
+
+  
+
+  <script>
+    const input = document.querySelector('.plus7');
+    const para = document.querySelector('.plus7result');
+
+    const input2 = document.querySelector('.times2');
+    const para2 = document.querySelector('.times2result');
+
+    const input3 = document.querySelector('.capitalise');
+    const para3 = document.querySelector('.capitaliseresult')
+
+    function plus7(num){
+      return num+7;
+    }
+
+    function times2(num){
+      return num*2;
+    }
+
+    function capitalise(text){
+      return text.toUpperCase()
+    }
+
+
+    input.addEventListener("change", () => {
+      const num = parseFloat(input.value);
+      if (isNaN(num)) {
+        para.textContent = "You need to enter a number!";
+      } else {
+
+        para.textContent += `${num} plus ten is ${plus7(num)}. `;
+      }
+    });
+
+
+    input2.addEventListener("change", () => {
+      const num = parseFloat(input2.value);
+      if (isNaN(num)) {
+        para2.textContent = "You need to enter a number!";
+      } else {
+        para2.textContent += `${num} times two is ${times2(num)}. `;
+      }
+    });
+
+    input3.addEventListener("change", () => {
+      const text = input3.value;
+      if (!text) {
+        para3.textContent = "You need to enter text!";
+      } else {
+        para3.textContent += `${text} capitalised is ${capitalise(text)}. `;
+      }
+    });
+
+  </script>
+</body>
+</html>
