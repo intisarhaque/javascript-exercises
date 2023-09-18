@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+
+    <script>
+        console.log("test");
+        let cars = ["a", "b", "c"];
+        console.log(cars[1]);
+        document.getElementById("demo").innerHTML=cars.toString();
+
+        let person = {
+            firstname: "john",
+            lastname: "mat",
+            age: 46
+        };
+        document.getElementById("demo2").innerHTML=person.firstname;
+
+
+
+        let fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo3").innerHTML = fruits;
+
+        fruits.splice(2, 0, "Lemon", "Kiwi");
+        document.getElementById("demo4").innerHTML = fruits;
+
+        fruits.splice(1,2);
+        document.getElementById("demo5").innerHTML = fruits;
+
+        fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+        let citrus = fruits.slice(1,3);
+        document.getElementById("demo6").innerHTML = citrus;
+
+        function toUpper(string) {
+            return string.toUpperCase();
+        }
+
+        function fruitO(fruit){
+            return fruit.includes("O");
+        }
+        const fruitsUpper = fruits.map(toUpper);
+        for (let fruitsing of fruitsUpper){
+            console.log(fruitsing);
+        }
+
+        const fruitsOs = fruitsUpper.filter(fruitO);
+        for (let fruitsing of fruitsOs){
+            console.log(fruitsing);
+        }
+
+
+    </script>
+    
+</body>
+</html>
